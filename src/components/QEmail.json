@@ -1,0 +1,59 @@
+{
+  "type": "component",
+  "props": {
+    "senders": {
+      "type": "Array",
+      "category": "model",
+      "desc": "An array of email addresses which can be used as the 'from' field.",
+      "required": true,
+      "default": "[]]",
+      "examples": ["['johndoe@gmail.com']"]
+    },
+    "disabledFields": {
+      "type": "Array",
+      "category": "style",
+      "desc": "An array which contains the (input) fields which should be disabled.",
+      "required": false,
+      "default": "[]]",
+      "examples": ["['cc']"]
+    },
+    "hiddenFields": {
+      "type": "Array",
+      "category": "style",
+      "desc": "An array which contains the (input) fields which should be hidden.",
+      "required": false,
+      "default": "[]]",
+      "examples": ["['cc']"]
+    }
+  },
+  "events": {
+    "send": {
+      "desc": "Emitted when send() is called",
+      "params": {
+        "email": {
+          "type": "Object",
+          "desc": "The email object which contains the sender, to, cc, bcc, subject and body."
+        }
+      }
+    }
+  },
+  "methods": {
+    "compose": {
+      "desc": "Sets the current email to the provides values",
+      "params": {
+        "email": {
+          "type": "Objeect",
+          "examples": [
+            "{ to: 'johndoe@gmail.com', subject: 'Subject', body: 'Test message' }"
+          ]
+        }
+      }
+    },
+    "send": {
+      "desc": "Triggers the send event with the current email"
+    },
+    "clear": {
+      "desc": "Clears the current email"
+    }
+  }
+}
