@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-qemail",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Email composer for Quasar Framework",
   "author": "Stefan van Herwijnen",
   "license": "MIT",
